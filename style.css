@@ -14,15 +14,15 @@ body {
     background-repeat: no-repeat;
     display: grid;
     place-items: center;
-    height: 100%;
-    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
     font-size: 12px;
     font-weight: 400;
-    min-width: 425px;
+    min-width: 325px;
+    margin: 10em auto;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     background-color: white;
     margin: 0 auto;
     border-radius: 25px;
@@ -42,22 +42,22 @@ body {
 
 .container-img {
     background-image: url(images/illustration-woman-online-mobile.svg);
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     top: -9em;
 }
 
 .container-img--bg {
     background-image: url(images/bg-pattern-mobile.svg);
-    top: 1em;
-    width: 250px;
-    height: 110px;
+    top: -1em;
+    width: 225px;
+    height: 100px;
 }
 
 .container h1 {
     font-size: 2rem;
     color: hsl(238, 29%, 16%);
-    margin-top: 5em;
+    margin-top: 4em;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -116,6 +116,7 @@ body {
     body {
         font-size: 16px;
         max-width: 800px;
+        margin: 0 auto;
     }
     .container-img--bg {
         top: -1em;
