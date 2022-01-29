@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    min-width: 425px;
+}
+
+.container {
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 25px;
+    position: relative;
+    padding-bottom: 3em;
+    box-shadow: 0px 40px 50px hsl(245.3, 47.1%, 52.5%);
+}
+
+.container-img-wrapper {
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+}
+
+.container-img {
+    background-image: url(images/illustration-woman-online-mobile.svg);
+    width: 250px;
+    height: 250px;
+    top: -9em;
+}
+
+.container-img--bg {
+    background-image: url(images/bg-pattern-mobile.svg);
+    top: 1em;
+    width: 250px;
+    height: 110px;
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: hsl(238, 29%, 16%);
+    margin-top: 5em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.qablock {
+    width: 80%;
+    margin: 1em auto;
+    font-size: 1em;
+    color: hsl(238, 29%, 16%);
+}
+
+.question {
+    margin: 1em 0em;
+    cursor: pointer;
+}
+
+.question::after {
+    content: url(images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-left: 1em;
+    float: right;
+}
+
+.question a:link {
+    text-decoration: none;
+}
+
+.question a:hover {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+}
+
+.question.active {
+    font-weight: 700;
+}
+
+.question.active:after {
+    transform: rotate(180deg);
+}
+
+.answer {
+    display: none;
+    margin: 1em 0em;
+    width: 85%;
+    line-height: 1.5;
+}
+
+.hr-line {
+    margin: 1.5em 0em;
+    height: 1px;
+    background-color: hsl(240, 5%, 91%)
+}
+
+@media screen and (min-width:600px) {
+    body {
+        font-size: 16px;
+        max-width: 800px;
+    }
+    .container-img--bg {
+        top: -1em;
+    }
+}
+
+
+/* beyond ipad sizes */
+
+@media screen and (min-width:811px) {
+    body {
+        min-width: 925px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "image content"
+    }
+    .container-img-wrapper {
+        grid-area: image;
+        background-repeat: no-repeat;
+        position: fixed;
+    }
+    .container-img {
+        width: 500px;
+        height: 500px;
+        top: 10em;
+        background-position: bottom left;
+        left: -36em;
+    }
+    .container-img--bg {
+        background-image: url(images/bg-pattern-desktop.svg);
+        width: 500px;
+        height: 700px;
+        top: 20em;
+        background-repeat: repeat-y;
+        background-position: bottom left;
+        left: -36em;
+        transform: rotate(180deg);
+    }
+    .faq-container {
+        grid-area: content;
+    }
+    .container h1 {
+        margin: 0;
+        padding: 2.5em 0 1.5em;
+        text-align: left;
+        margin-left: 1.25em;
+    }
+}
