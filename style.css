@@ -104,6 +104,12 @@ body {
     background-color: hsl(240, 5%, 91%)
 }
 
+.container h1 {
+    margin: 3em auto 0.5em;
+    padding: 0.5em 0 1em;
+    text-align: center;
+}
+
 @media screen and (min-width:600px) {
     body {
         font-size: 16px;
@@ -123,12 +129,13 @@ body {
         margin: 0 auto;
     }
     .container {
-        width: 924px;
-        min-height: 60vh;
+        width: 900px;
+        min-height: 55vh;
         display: flex;
         justify-content: center;
         align-items: center;
         padding-bottom: 1em;
+        margin: 1em auto;
     }
     .container-img-wrapper {
         display: none;
@@ -178,16 +185,14 @@ body {
         width: 380px;
         top: -160px;
     }
-}
-
-.faq-container {
-    padding: 68px 0px 0px 16px;
-    flex: 1 1 auto;
-}
-
-.container h1 {
-    margin: 0;
-    padding: 0.5em 0 1em;
-    text-align: left;
-    margin-left: 1.25em;
+    .faq-container {
+        padding: 68px 0px 0px 16px;
+        flex: 1 1 auto;
+    }
+    .container h1 {
+        margin: 0;
+        padding: 0.5em 0 1em;
+        text-align: left;
+        margin-left: 1.25em;
+    }
 }
