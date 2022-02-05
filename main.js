@@ -7,7 +7,8 @@ questions.forEach(question => {
     answer.style.setProperty('display', 'none');
 
     question.addEventListener('click', () => {
-        question.classList.toggle("active");
+        // question.classList.toggle("active");
+        question.firstElementChild.classList.toggle("active");
         var curState = answer.style.getPropertyValue("display");
         if (curState === 'none') {
             answer.style.setProperty('display', 'block');
